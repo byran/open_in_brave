@@ -1,0 +1,9 @@
+{
+  "name": "uk.co.adgico.open-in-brave",
+  "description": "Launch Brave with a URL",
+  "path": "",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://REPLACE_WITH_EXTENSION_ID/"
+  ]
+}
