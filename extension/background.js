@@ -1,4 +1,4 @@
-const HOST_NAME = "uk.co.adgico.open-in-brave";
+const HOST_NAME = "uk.co.adgico.open_in_brave";
 
 function createMenus() {
     chrome.contextMenus.create({

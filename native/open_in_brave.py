@@ -30,7 +30,8 @@ def brave_cmd(url):
         ]
         for p in paths:
             if os.path.exists(p):
-                return [p, "--new-window", url]
+                # return [p, "--new-window", url]
+                return [p, url]
         return ["brave.exe", "--new-window", url]
     else:
         return ["brave-browser", "--new-window", url]

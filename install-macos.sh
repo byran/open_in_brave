@@ -8,12 +8,12 @@ fi
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HELPER_PATH="$BASE_DIR/native/open_in_brave.py"
-HOST_NAME="uk.co.adgico.open-in-brave"
+HOST_NAME="uk.co.adgico.open_in_brave"
 TARGET_DIR="$HOME/Library/Application Support/Google/Chrome/NativeMessagingHosts"
 mkdir -p "$TARGET_DIR"
 
 MANIFEST_PATH="$TARGET_DIR/$HOST_NAME.json"
-cat "$BASE_DIR/native/host-manifests/uk.co.adgico.open-in-brave.template.json" \
+cat "$BASE_DIR/native/host-manifests/uk.co.adgico.open_in_brave.template.json" \
   | sed "s|\"path\": \"\"|\"path\": \"${HELPER_PATH//\//\\/}\"|" \
   | sed "s/REPLACE_WITH_EXTENSION_ID/$EXTENSION_ID/" \
   > "$MANIFEST_PATH"

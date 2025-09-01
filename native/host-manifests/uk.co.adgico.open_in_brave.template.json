@@ -1,5 +1,5 @@
 {
-  "name": "uk.co.adgico.open-in-brave",
+  "name": "uk.co.adgico.open_in_brave",
   "description": "Launch Brave with a URL",
   "path": "",
   "type": "stdio",

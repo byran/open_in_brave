@@ -7,13 +7,13 @@ if (-not $ExtensionId) {
 }
 
 $BaseDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$HelperPath = Join-Path $BaseDir "native\open_in_brave.py"
-$HostName = "uk.co.adgico.open-in-brave"
+$HelperPath = Join-Path $BaseDir "native\open_in_brave.bat"
+$HostName = "uk.co.adgico.open_in_brave"
 $ManifestDir = "$env:LOCALAPPDATA"
 $ManifestPath = Join-Path $ManifestDir "$HostName.json"
 
 # Build JSON from template
-$templatePath = Join-Path $BaseDir "native\host-manifests\uk.co.adgico.open-in-brave.template.json"
+$templatePath = Join-Path $BaseDir "native\host-manifests\uk.co.adgico.open_in_brave.template.json"
 $template = Get-Content $templatePath -Raw | ConvertFrom-Json
 $template.path = $HelperPath
 $template.allowed_origins = @("chrome-extension://$ExtensionId/")
