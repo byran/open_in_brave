@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import sys, json, struct, subprocess, platform, os
 
+home_dir = os.path.expanduser("~")
+
 def read_message():
     raw_len = sys.stdin.buffer.read(4)
     if len(raw_len) == 0:
@@ -22,6 +24,7 @@ def brave_cmd(url):
         return [path, "--new-window", url]
     elif system == "Windows":
         paths = [
+            os.path.join(home_dir, r"AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe"),
             r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
             r"C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe"
         ]
